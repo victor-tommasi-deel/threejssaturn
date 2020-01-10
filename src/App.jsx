@@ -20,7 +20,7 @@ class App extends React.Component {
     const ringTwo = createRing(6.9, 0.7, 2, 50, 0xffad60);
     const ringThree = createRing(8.5, 0.7, 2, 50, 0xeac086);
     const start = createStaturn(planet, [ringOne, ringTwo, ringThree]);
-    const viewer = document.getElementById('viewer');
+    const { viewer } = this.refs;
     viewer.appendChild(start.renderer.domElement);
     const { renderer, scene, camera } = start;
     this.setState({
